@@ -1,6 +1,6 @@
 # PowerBI
 Queries, Functions and other
 
-#Custom Functions
+<B>Custom Functions</B>
 
-DecompressZIP --> Function to Decompress ZIP files with PowerBI
+<A HREF="https://github.com/marcelosuarez/PowerBI/blob/main/DecompressZIP">DecompressZIP</A> --> Function to Decompress ZIP files with PowerBI
