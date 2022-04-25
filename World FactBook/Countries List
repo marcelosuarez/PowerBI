@@ -1,0 +1,6 @@
+let
+    Source = Csv.Document(Web.Contents("https://github.com/marcelosuarez/WorldFactBook/raw/main/CIA-WorldFactBook-CountriesMapping.csv"),[Delimiter=",", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    #"Changed Type to Text" = Table.TransformColumnTypes(#"Promoted Headers",{{"ENTITY", type text}, {"GEC", type text}, {"ISO 3166", type text}, {"STANAG", type text}, {"INTERNET", type text}, {"COMMENT", type text}, {"", type text}, {"_1", type text}})
+in
+    #"Changed Type to Text"
