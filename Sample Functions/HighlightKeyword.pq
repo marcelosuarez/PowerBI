@@ -1,0 +1,32 @@
+    let HighlightKeyword = (ActivityDescription) =>
+        Text.Replace((ActivityDescription),"IDP","<font color=""blue"">IDP</font>"),
+        Text.Replace((ActivityDescription),"idp","<font color=""blue"">IDP</font>"),
+        Text.Replace((ActivityDescription),"Displaced","<font color=""blue"">Displaced</font>"),
+        Text.Replace((ActivityDescription),"displaced","<font color=""blue"">displaced</font>"),
+        Text.Replace((ActivityDescription),"Refugee","<font color=""blue"">Refugee</font>"),
+        Text.Replace((ActivityDescription),"refugee","<font color=""blue"">regugee</font>")
+      in HighlightKeyword
+
+#"Highlight IDP" = Table.ReplaceValue(#"Duplicated Column","IDP","<font color=""blue"">IDP</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight displaced" = Table.ReplaceValue(#"Highlight IDP","displaced","<font color=""blue"">displaced</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight refugee" = Table.ReplaceValue(#"Highlight displaced","refugee","<font color=""blue"">refugee</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight yazidi" = Table.ReplaceValue(#"Highlight refugee","yazidi","<font color=""blue"">yazidi</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight ethnic" = Table.ReplaceValue(#"Highlight yazidi","ethnic","<font color=""blue"">ethnic</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight religion" = Table.ReplaceValue(#"Highlight ethnic","religion","<font color=""blue"">religion</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight religious" = Table.ReplaceValue(#"Highlight religion","religious","<font color=""blue"">religious</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight vulnerable" = Table.ReplaceValue(#"Highlight religious","vulnerable","<font color=""blue"">vulnerable</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight returnee" = Table.ReplaceValue(#"Highlight vulnerable","returnee","<font color=""blue"">returnee</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight yezidi" = Table.ReplaceValue(#"Highlight returnee","yezidi","<font color=""red"">yezidi</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight daesh" = Table.ReplaceValue(#"Highlight yezidi","daesh","<font color=""blue"">daesh</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight minorities" = Table.ReplaceValue(#"Highlight daesh","minorities","<font color=""blue"">minorities</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight communities" = Table.ReplaceValue(#"Highlight minorities","communities","<font color=""blue"">communities</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight ISIL" = Table.ReplaceValue(#"Highlight communities","ISIL","<font color=""blue"">ISIL</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight survivor" = Table.ReplaceValue(#"Highlight ISIL","survivor","<font color=""blue"">survivor</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"highligth church" = Table.ReplaceValue(#"Highlight survivor","church","<font color=""blue"">church</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight shabak" = Table.ReplaceValue(#"highligth church","shabak","<font color=""blue"">shabak</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight christian" = Table.ReplaceValue(#"Highlight shabak","christian","<font color=""red"">christian</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight marginalized" = Table.ReplaceValue(#"Highlight christian","marginalized","<font color=""blue"">marginalized</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight kurd" = Table.ReplaceValue(#"Highlight marginalized","kurd","<font color=""red"">kurd</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight shia" = Table.ReplaceValue(#"Highlight kurd","shia","<font color=""red"">shia</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight comunity" = Table.ReplaceValue(#"Highlight shia","community","<font color=""blue"">community</font>",Replacer.ReplaceText,{"Description HTML"}),
+    #"Highlight targeted" = Table.ReplaceValue(#"Highlight comunity","targeted","<font color=""blue"">targeted</font>",Replacer.ReplaceText,{"Description HTML"})
