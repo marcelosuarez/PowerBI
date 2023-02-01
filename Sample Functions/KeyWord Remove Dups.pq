@@ -1,9 +1,0 @@
-Table.TransformColumns(#"Filtered Rows2",{{"Keyword Merge", each Text.Combine(
-                                                                               List.Distinct(
-                                                                                             List.Transform(
-                                                                                                            Text.Split(_,",")
-                                                                                                            , Text.Trim
-                                                                                                            )
-                                                                                            )
-                                                                                ,", "
-                                                                            )}})
