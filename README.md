@@ -3,7 +3,7 @@ Queries, Functions and other
 
 PowerQuery Common Formulas
 
-<A HREF="/PowerQuery Common Formulas/[Value] is Numeric?">[Value] is Numeric?</A>
+<A HREF="/PowerQuery_Common_Formulas/Value_is_Numeric">[Value] is Numeric?</A>
 
 DAX Common Formulas
 
