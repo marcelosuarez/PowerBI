@@ -1,6 +1,12 @@
 # PowerBI
 Queries, Functions and other
 
+PowerQuery Common Formulas
+
+<A HREF="/PowerQuery Common Formulas/[Value] is Numeric?">[Value] is Numeric?</A>
+
+DAX Common Formulas
+
 <B>Custom Functions</B>
 
 <A HREF="https://github.com/marcelosuarez/PowerBI/blob/main/DecompressZIP">DecompressZIP</A> --> Function to Decompress ZIP files with PowerBI

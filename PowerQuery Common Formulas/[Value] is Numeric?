@@ -1,0 +1,2 @@
+// [Value] is Numeric?
+try if Value.Is(Number.From([Value]), type number) then "Number" else "Not Number" otherwise "Not Number"
